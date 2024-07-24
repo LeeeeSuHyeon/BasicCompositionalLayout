@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         collectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: BannerCollectionViewCell.id)
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         
-        // 데이터 소스 설정
-        setDataSource()
+        setDataSource()  // 데이터 소스 설정
+        setSnapShot()    // snapShot 설정
     }
     
     private func setDataSource(){
@@ -33,6 +33,20 @@ class ViewController: UIViewController {
 //            cell.config(title: <#T##String#>, imageUrl: <#T##String#>)
             return cell
         })
+    }
+    
+    private func setSnapShot(){
+        var snapShot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapShot.appendSections([Section(id: "Banner")])
+        
+        let bannerItem = [
+            Item.banner(HomeItem(title: "교촌 치킨", imageUrl: "https://cdn.mkhealth.co.kr/news/photo/202402/67298_72713_3150.png")),
+            Item.banner(HomeItem(title: "bbq 치킨", imageUrl: "https://cdn.mkhealth.co.kr/news/photo/202402/67298_72713_3150.png")),
+            Item.banner(HomeItem(title: "bhc 치킨", imageUrl: "https://cdn.mkhealth.co.kr/news/photo/202402/67298_72713_3150.png"))
+        ]
+        
+        snapShot.appendItems(bannerItem, toSection: Section(id: "Banner"))
+        dataSource?.apply(snapShot)
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
