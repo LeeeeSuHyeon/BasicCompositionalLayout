@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0990D188290D8A3B7212323 /* Pods_BasicCompositionalLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */; };
 		CBA681982C4F8D8F00BF9E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681972C4F8D8F00BF9E74 /* AppDelegate.swift */; };
 		CBA6819A2C4F8D8F00BF9E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681992C4F8D8F00BF9E74 /* SceneDelegate.swift */; };
 		CBA6819C2C4F8D8F00BF9E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6819B2C4F8D8F00BF9E74 /* ViewController.swift */; };
@@ -15,11 +16,10 @@
 		CBA681A42C4F8D9000BF9E74 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CBA681A32C4F8D9000BF9E74 /* Base */; };
 		CBA681AC2C4F8E6000BF9E74 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681AB2C4F8E6000BF9E74 /* Item.swift */; };
 		CBA681AE2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681AD2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift */; };
-		CBA681B12C4F8FCF00BF9E74 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBA681B02C4F8FCF00BF9E74 /* SnapKit */; };
-		CBA681B32C4F8FCF00BF9E74 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CBA681B22C4F8FCF00BF9E74 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B05B0262DBDBA108571664A /* Pods-BasicCompositionalLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicCompositionalLayout.debug.xcconfig"; path = "Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		CBA681942C4F8D8F00BF9E74 /* BasicCompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicCompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA681972C4F8D8F00BF9E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA681992C4F8D8F00BF9E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +30,8 @@
 		CBA681A52C4F8D9000BF9E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA681AB2C4F8E6000BF9E74 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CBA681AD2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicCompositionalLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicCompositionalLayout.release.xcconfig"; path = "Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,19 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA681B12C4F8FCF00BF9E74 /* SnapKit in Frameworks */,
-				CBA681B32C4F8FCF00BF9E74 /* SnapKit-Dynamic in Frameworks */,
+				A0990D188290D8A3B7212323 /* Pods_BasicCompositionalLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29D019FC2C81D219786A3343 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B05B0262DBDBA108571664A /* Pods-BasicCompositionalLayout.debug.xcconfig */,
+				E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CBA6818B2C4F8D8F00BF9E74 = {
 			isa = PBXGroup;
 			children = (
 				CBA681962C4F8D8F00BF9E74 /* BasicCompositionalLayout */,
 				CBA681952C4F8D8F00BF9E74 /* Products */,
+				29D019FC2C81D219786A3343 /* Pods */,
+				D60C2E664C413E49A9E9E224 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +89,14 @@
 			path = BasicCompositionalLayout;
 			sourceTree = "<group>";
 		};
+		D60C2E664C413E49A9E9E224 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,19 +104,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBA681A82C4F8D9000BF9E74 /* Build configuration list for PBXNativeTarget "BasicCompositionalLayout" */;
 			buildPhases = (
+				C6146567FF0F2C038FD620EA /* [CP] Check Pods Manifest.lock */,
 				CBA681902C4F8D8F00BF9E74 /* Sources */,
 				CBA681912C4F8D8F00BF9E74 /* Frameworks */,
 				CBA681922C4F8D8F00BF9E74 /* Resources */,
+				33EE7C1D0E2C2AFF16595CEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BasicCompositionalLayout;
-			packageProductDependencies = (
-				CBA681B02C4F8FCF00BF9E74 /* SnapKit */,
-				CBA681B22C4F8FCF00BF9E74 /* SnapKit-Dynamic */,
-			);
 			productName = BasicCompositionalLayout;
 			productReference = CBA681942C4F8D8F00BF9E74 /* BasicCompositionalLayout.app */;
 			productType = "com.apple.product-type.application";
@@ -125,9 +143,6 @@
 				Base,
 			);
 			mainGroup = CBA6818B2C4F8D8F00BF9E74;
-			packageReferences = (
-				CBA681AF2C4F8FCF00BF9E74 /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = CBA681952C4F8D8F00BF9E74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +164,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33EE7C1D0E2C2AFF16595CEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6146567FF0F2C038FD620EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicCompositionalLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBA681902C4F8D8F00BF9E74 /* Sources */ = {
@@ -222,7 +279,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -285,7 +342,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -306,6 +363,7 @@
 		};
 		CBA681A92C4F8D9000BF9E74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B05B0262DBDBA108571664A /* Pods-BasicCompositionalLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +392,7 @@
 		};
 		CBA681AA2C4F8D9000BF9E74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,30 +441,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CBA681AF2C4F8FCF00BF9E74 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.7.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CBA681B02C4F8FCF00BF9E74 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBA681AF2C4F8FCF00BF9E74 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		CBA681B22C4F8FCF00BF9E74 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CBA681AF2C4F8FCF00BF9E74 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBA6818C2C4F8D8F00BF9E74 /* Project object */;
 }
