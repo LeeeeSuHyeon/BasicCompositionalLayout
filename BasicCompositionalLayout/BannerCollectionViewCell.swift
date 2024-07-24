@@ -36,8 +36,8 @@ class BannerCollectionViewCell : UICollectionViewCell {
     }
     
     // title, image set
-    private func config(title : String, imageUrl : String) {
-        titleLabel.text = "Title"
+    func config(title : String, imageUrl : String) {
+        titleLabel.text = title
         
         // imageURL
         

@@ -8,5 +8,7 @@ target 'BasicCompositionalLayout' do
   # Pods for BasicCompositionalLayout
 
  pod 'SnapKit'
+ pod 'Kingfisher'
+
 
 end

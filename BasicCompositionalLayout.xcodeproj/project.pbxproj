@@ -16,6 +16,9 @@
 		CBA681A42C4F8D9000BF9E74 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CBA681A32C4F8D9000BF9E74 /* Base */; };
 		CBA681AC2C4F8E6000BF9E74 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681AB2C4F8E6000BF9E74 /* Item.swift */; };
 		CBA681AE2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA681AD2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift */; };
+		CBA681B42C50E21B00BF9E74 /* Pods_BasicCompositionalLayout.framework in Sources */ = {isa = PBXBuildFile; fileRef = E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */; };
+		CBA681B52C50E22400BF9E74 /* Pods-BasicCompositionalLayout.debug.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 8B05B0262DBDBA108571664A /* Pods-BasicCompositionalLayout.debug.xcconfig */; };
+		CBA681B62C50E22400BF9E74 /* Pods-BasicCompositionalLayout.release.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA681B52C50E22400BF9E74 /* Pods-BasicCompositionalLayout.debug.xcconfig in Sources */,
+				CBA681B62C50E22400BF9E74 /* Pods-BasicCompositionalLayout.release.xcconfig in Sources */,
+				CBA681B42C50E21B00BF9E74 /* Pods_BasicCompositionalLayout.framework in Sources */,
 				CBA681AC2C4F8E6000BF9E74 /* Item.swift in Sources */,
 				CBA6819C2C4F8D8F00BF9E74 /* ViewController.swift in Sources */,
 				CBA681982C4F8D8F00BF9E74 /* AppDelegate.swift in Sources */,

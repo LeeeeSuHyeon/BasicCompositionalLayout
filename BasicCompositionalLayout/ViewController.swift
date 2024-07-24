@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setUI()     // collectionView UI 설정
         
         // 셀 구현
         collectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: BannerCollectionViewCell.id)
@@ -25,13 +26,29 @@ class ViewController: UIViewController {
         setSnapShot()    // snapShot 설정
     }
     
+    private func setUI(){
+        self.view.addSubview(collectionView)
+        collectionView.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
     private func setDataSource(){
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.id, for: indexPath) as? BannerCollectionViewCell 
-            else { return UICollectionViewCell() }
             
-//            cell.config(title: <#T##String#>, imageUrl: <#T##String#>)
-            return cell
+            switch itemIdentifier {
+            case .banner(let item):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.id, for: indexPath) as? BannerCollectionViewCell
+                else { return UICollectionViewCell() }
+                
+                cell.config(title: item.title, imageUrl: item.imageUrl)
+                return cell
+            case .normalCarousel(_):
+                return UICollectionViewCell()
+            case .listCarousel(_):
+                return UICollectionViewCell()
+            }
+
         })
     }
     
