@@ -19,6 +19,7 @@
 		CBA681B42C50E21B00BF9E74 /* Pods_BasicCompositionalLayout.framework in Sources */ = {isa = PBXBuildFile; fileRef = E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */; };
 		CBA681B52C50E22400BF9E74 /* Pods-BasicCompositionalLayout.debug.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 8B05B0262DBDBA108571664A /* Pods-BasicCompositionalLayout.debug.xcconfig */; };
 		CBA681B62C50E22400BF9E74 /* Pods-BasicCompositionalLayout.release.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */; };
+		CBAD30792C522AE100B2661A /* NormalCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAD30782C522AE100B2661A /* NormalCarouselCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CBA681A52C4F8D9000BF9E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA681AB2C4F8E6000BF9E74 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CBA681AD2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		CBAD30782C522AE100B2661A /* NormalCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1B88AEEAFE3E9A30631D9B7 /* Pods_BasicCompositionalLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicCompositionalLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E224C128EFD1738719067A4A /* Pods-BasicCompositionalLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicCompositionalLayout.release.xcconfig"; path = "Target Support Files/Pods-BasicCompositionalLayout/Pods-BasicCompositionalLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				CBA6819B2C4F8D8F00BF9E74 /* ViewController.swift */,
 				CBA681AB2C4F8E6000BF9E74 /* Item.swift */,
 				CBA681AD2C4F8EE100BF9E74 /* BannerCollectionViewCell.swift */,
+				CBAD30782C522AE100B2661A /* NormalCarouselCollectionViewCell.swift */,
 				CBA6819D2C4F8D8F00BF9E74 /* Main.storyboard */,
 				CBA681A02C4F8D9000BF9E74 /* Assets.xcassets */,
 				CBA681A22C4F8D9000BF9E74 /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 				CBA681B52C50E22400BF9E74 /* Pods-BasicCompositionalLayout.debug.xcconfig in Sources */,
 				CBA681B62C50E22400BF9E74 /* Pods-BasicCompositionalLayout.release.xcconfig in Sources */,
 				CBA681B42C50E21B00BF9E74 /* Pods_BasicCompositionalLayout.framework in Sources */,
+				CBAD30792C522AE100B2661A /* NormalCarouselCollectionViewCell.swift in Sources */,
 				CBA681AC2C4F8E6000BF9E74 /* Item.swift in Sources */,
 				CBA6819C2C4F8D8F00BF9E74 /* ViewController.swift in Sources */,
 				CBA681982C4F8D8F00BF9E74 /* AppDelegate.swift in Sources */,

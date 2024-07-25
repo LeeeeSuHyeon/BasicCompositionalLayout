@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         
         // 셀 구현
         collectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: BannerCollectionViewCell.id)
+        collectionView.register(NormalCarouselCollectionViewCell.self, forCellWithReuseIdentifier: NormalCarouselCollectionViewCell.id)
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         
         setDataSource()  // 데이터 소스 설정
@@ -69,7 +70,22 @@ class ViewController: UIViewController {
     private func createLayout() -> UICollectionViewCompositionalLayout {
         // index에 따라 다른 레이아웃을 리턴할 수 있음
         return UICollectionViewCompositionalLayout(sectionProvider: { [weak self] sectionIndex, environment in
-            return self?.createBannerSection()
+            switch sectionIndex {
+            // banner
+            case 0 :
+                return self?.createBannerSection()
+                
+            // normalCarousel
+            case 1 :
+                return self?.createNormalCarousel()
+            
+                // SubCarousel
+//             case 2 :
+//                return self?.createNormalCarousel()
+            default :
+                return self?.createBannerSection()
+            }
+            
         })
     }
     
