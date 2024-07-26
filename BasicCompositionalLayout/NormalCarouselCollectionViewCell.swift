@@ -44,7 +44,7 @@ class NormalCarouselCollectionViewCell : UICollectionViewCell {
         }
     }
     
-    func config(imageUrl : String, title : String, subTitle : String){
+    func config(imageUrl : String, title : String, subTitle : String?){
         mainImageView.kf.setImage(with: URL(string: imageUrl))
         titleLabel.text = title
         subTitleLabel.text = subTitle
