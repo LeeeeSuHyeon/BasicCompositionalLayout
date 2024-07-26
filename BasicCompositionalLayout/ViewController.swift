@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         // 셀 구현
         collectionView.register(BannerCollectionViewCell.self, forCellWithReuseIdentifier: BannerCollectionViewCell.id)
         collectionView.register(NormalCarouselCollectionViewCell.self, forCellWithReuseIdentifier: NormalCarouselCollectionViewCell.id)
+        collectionView.register(ListCarouselCollectionViewCell.self, forCellWithReuseIdentifier: ListCarouselCollectionViewCell.id)
         collectionView.setCollectionViewLayout(createLayout(), animated: true)
         
         setDataSource()  // 데이터 소스 설정
@@ -55,8 +56,12 @@ class ViewController: UIViewController {
                 cell.config(imageUrl: item.imageUrl, title: item.title, subTitle: item.subTitle)
                 return cell
                 
-            case .listCarousel(_):
-                return UICollectionViewCell()
+            case .listCarousel(let item):
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCarouselCollectionViewCell.id, for: indexPath) as? ListCarouselCollectionViewCell
+                else { return UICollectionViewCell()}
+                
+                cell.config(imageUrl: item.imageUrl, title: item.title, subTitle: item.subTitle)
+                return cell
             }
 
         })
@@ -91,6 +96,20 @@ class ViewController: UIViewController {
         ]
         snapShot.appendItems(normalCarouselItem, toSection: normalCarousel)
         
+        // ListCarousel
+        let listCarousel = Section(id: "ListCarousel")
+        snapShot.appendSections([listCarousel])
+        
+        let listCarouselItem = [
+            Item.listCarousel(HomeItem(title: "title1", subTitle: "subtitle1", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "title2", subTitle: "subtitle2", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "title3", subTitle: "subtitle3", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "title4", subTitle: "subtitle4", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "title5", subTitle: "subtitle5", imageUrl: imageUrl)),
+            Item.listCarousel(HomeItem(title: "title6", subTitle: "subtitle6", imageUrl: imageUrl))
+        ]
+        snapShot.appendItems(listCarouselItem, toSection: listCarousel)
+        
         dataSource?.apply(snapShot)
         
         
@@ -113,9 +132,10 @@ class ViewController: UIViewController {
             case 1 :
                 return self.createNormalCarousel()
             
-                // SubCarousel
-//             case 2 :
-//                return self?.createNormalCarousel()
+            // SubCarousel
+            case 2 :
+                return self.createListCarousel()
+                
             default :
                 return self.createBannerSection()
             }
@@ -146,12 +166,27 @@ class ViewController: UIViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(180))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)   // 섹션의 패딩 설정
+        return section
+    }
+    
+    private func createListCarousel() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(250))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3)    // 3개 이후부터는 옆으로 이동
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        section.orthogonalScrollingBehavior = .continuous
+        
         return section
     }
 
