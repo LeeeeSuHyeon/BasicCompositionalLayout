@@ -97,6 +97,10 @@ class ViewController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
+        // config 생성 (레이아웃 간 패딩 추가)
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 20
+        
         // index에 따라 다른 레이아웃을 리턴할 수 있음
         return UICollectionViewCompositionalLayout(sectionProvider: { sectionIndex, environment in
             
@@ -116,7 +120,7 @@ class ViewController: UIViewController {
                 return self.createBannerSection()
             }
             
-        })
+        }, configuration: config)
     }
     
     private func createBannerSection() -> NSCollectionLayoutSection {
@@ -140,12 +144,14 @@ class ViewController: UIViewController {
     private func createNormalCarousel() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .absolute(180))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)   // 섹션의 패딩 설정
         return section
     }
 
